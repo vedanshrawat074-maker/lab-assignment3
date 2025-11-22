@@ -1,0 +1,131 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.header {
+  position: sticky;
+  top: 0;
+  background: darkblue;
+  padding: 1rem 2rem; /*two padding first for up down and second for left right  */
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav a {
+  color: white;
+  margin-left: 1.5rem;
+  text-decoration: none;
+  font-weight: 500;/*for the boldness of text */
+  transition: 0.3s;
+}
+.nav a:hover {
+    color: orange
+}
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4rem 2rem;
+}
+
+.hero-text h1 {
+  font-size: 2.5rem;
+}
+
+.animate-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: orange;
+  animation: colorChange 3s infinite alternate;
+}
+
+@keyframes colorChange {
+  0% { color: orange; }
+  100% { color: blue; }
+}
+
+.hero-img img {
+  width: 250px;
+}
+section {
+  padding: 3rem 2rem;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.grid {            /* GRID */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+.card, .project-card {/* CARDS */
+  background: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px lightgray;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.card:hover, .project-card:hover {
+  transform: translateY(-5px);
+}
+
+
+.contact-form {/* CONTACT */
+  background: white;
+  max-width: 400px;
+  margin: auto;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px lightgray;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid grey;
+  border-radius: 6px;
+}
+
+.contact-form button {
+  width: 100%;
+  padding: 0.8rem;
+  background: blue;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contact-form button:hover {
+  background: #083a87;
+}
+
+.footer {/* FOOTER */
+  background: #0a52c0;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+  .hero-img img {
+    margin-top: 2rem;
+  }
+}
